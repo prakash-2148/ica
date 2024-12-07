@@ -1,0 +1,20 @@
+
+nginx:
+  name: nginx-proxy
+  labels:
+    app: nginx-proxy
+    env: dev
+  image:
+    repository: banuprakash2148/nginx-proxy
+    tag: "latest"
+    pullPolicy: IfNotPresent
+  replicas: 1
+  containerPorts:
+    http: 80
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "250m"
+      memory: "256Mi"

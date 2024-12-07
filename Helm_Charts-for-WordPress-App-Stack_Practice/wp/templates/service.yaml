@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.wp.name }}
+  labels:
+{{- toYaml .Values.wp.labels | nindent 4 }}
+{{- toYaml .Values.wp.labels | nindent 4 }}
+{{- toYaml .Values.wp.labels | nindent 4 }}
+spec:
+  ports:
+  - port: 80            
+    protocol: TCP
+    targetPort: {{ .Values.wp.containerPorts.http }}      
+  type: NodePort
+  selector:
+{{- toYaml .Values.wp.labels | nindent 4 }}       
