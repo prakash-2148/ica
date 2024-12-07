@@ -1,9 +1,9 @@
+
 db:
   name: wp-database
   labels:
     app: db
     env: dev
-    id: c0911107
     stack: wordpress
   image:
     repository: mariadb
